@@ -10,11 +10,19 @@ $ pip install -r requirements.txt
 ```
 
 * Download pre-trained model to [checkpoint path](/checkpoints): [Pretrained on PNB and DTD training images](https://storage.googleapis.com/download.magenta.tensorflow.org/models/arbitrary_style_transfer.tar.gz)
+```bash
+$ cd /path/to/arbitrary_image_stylization/checkpoints
+$ wget https://storage.googleapis.com/download.magenta.tensorflow.org/models/arbitrary_style_transfer.tar.gz
+$ tar zxvf arbitrary_style_transfer.tar.gz
+$ mv arbitrary_style_transfer/* ./
+$ rm -r arbitrary_style_transfer
+$ rm arbitrary_style_transfer.tar.gz
+```
 
 * Run the following command, stylize an image according to an arbitrary painting.
 ```bash
 # To use images in style_images and content_images directories.
-$ cd arbitrary_image_stylization
+$ cd /path/to/arbitrary_image_stylization
 $ python ./src/arbitrary_image_stylization_with_weights.py \
     --checkpoint=./checkpoints/model.ckpt \
     --output_dir=./images/stylized_images \
