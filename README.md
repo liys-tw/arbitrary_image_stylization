@@ -1,7 +1,7 @@
 # Fast Style Transfer for Arbitrary Styles
 fast artistic style transfer that may work on arbitrary painting styles.
 
-# Stylizing an Image using a pre-trained model
+## Stylizing an Image using a pre-trained model
 * Set up your environment with anaconda, install [requirements](/requirements.txt).
 ```bash
 $ conda create -n image_stylization python=3.6
